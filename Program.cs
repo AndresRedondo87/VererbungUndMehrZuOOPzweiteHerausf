@@ -25,6 +25,7 @@ namespace VererbungUndMehrZuOOPzweiteHerausf
             Console.WriteLine();
 
             Console.ReadKey();
+            //Meine Lösung scheint  gut zu funktionieren!!
         }
 
 
