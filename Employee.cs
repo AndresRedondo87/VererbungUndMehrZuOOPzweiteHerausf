@@ -33,17 +33,18 @@ namespace VererbungUndMehrZuOOPzweiteHerausf
             this.Salary = salary;
         }
 
-        public virtual void Work()           //virtual um es überschreiben zu dürfen
+        //public virtual void Work()           //virtual um es überschreiben zu dürfen (in Trainee mit override)
+        public void Work()           //nicht virtual und in Trainee wird via new überschrieben!
         {
             //Name und Klassenname zeigen!
             Console.WriteLine($"{this.FirstName} {this.Name} is now working! " +
                 $"\n\tHis Position is {this.ToString().Remove(0, "VererbungUndMehrZuOOPzweiteHerausf".ToString().Length+1)}" +
                 $"\n\tHis Salary is {this.Salary}");
         }
-        protected void Pause()
+        public void Pause()
         {
 
-            Console.WriteLine("Pausing!");
+            Console.WriteLine("\tTaking a short Pause!\n");
         }
     }
 }

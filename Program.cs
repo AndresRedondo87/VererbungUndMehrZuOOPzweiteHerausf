@@ -10,18 +10,21 @@ namespace VererbungUndMehrZuOOPzweiteHerausf
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Vererbung2");
+            Console.WriteLine("Vererbung2\n");
 
             Employee mitarbeiter1 = new Employee("Redondo", "Andrés", 55555);
             mitarbeiter1.Work();
+            mitarbeiter1.Pause();
 
             Boss chef = new Boss("Burns", "Montgomery", 999999, "Porsche");
             chef.Work();
             chef.Lead();
+            chef.Pause();
 
-            Trainee azubi = new Trainee("Müller", "Florenz", 11111, 4);
+            Trainee azubi = new Trainee("Müller", "Florenz", 11111, 4,5);
             azubi.Work();
             azubi.Learn();
+            azubi.Pause();
             Console.WriteLine();
 
             Console.ReadKey();

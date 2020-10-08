@@ -14,15 +14,24 @@ namespace VererbungUndMehrZuOOPzweiteHerausf
 
         public Boss()
         {
-            //den rest von Employee
+            //den rest von Employee GEHT DIREKT SO NICHT, siehe unten
+            this.Name = "EmptyName";
+            this.FirstName = "EmptyFirstName";
+            this.Salary = 45000;
+            //das ist nötig
             this.CompanyCar = "DefaultCar";
         }
 
-        public Boss(string name, string firstname, int salary, string companyCar)
+        //"alte aufrufweise" mit alle parametern direkt
+        //public Boss(string name, string firstname, int salary, string companyCar)
+        public Boss(string name, string firstname, int salary, string companyCar) :base(name, firstname, salary)
+                                                                                  // SO RUFEN WIR DIE Employee Konstruktor
+                                                                                  // wir haben alle parameter, die von Employee werden genauso wie in base(bzw Employee) gesetzt
+                                                                                  // und sind in CodeBlock nicht mehr erforderlich!
         {
-            this.Name = name;
-            this.FirstName = firstname;
-            this.Salary = salary;
+            //this.Name = name;
+            //this.FirstName = firstname;
+            //this.Salary = salary;
             this.CompanyCar = companyCar;
         }
 
