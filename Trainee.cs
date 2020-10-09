@@ -66,7 +66,11 @@ namespace VererbungUndMehrZuOOPzweiteHerausf
                 $"{this.FirstName} {this.Name} works only for {this.WorkingHours} hours a day!" +
                 $"\n\tand learns only for {this.SchoolHours} hours a day!" +
                 $"\n\tHis Position is {this.ToString().Remove(0, "VererbungUndMehrZuOOPzweiteHerausf".ToString().Length + 1)}" +
-                $"\n\tHis Salary is {this.Salary}"); 
+                $"\n\tHis Salary is {this.Salary}");
+
+            Console.WriteLine("\nTEST BASE: We can call the 'original' Employee.Work() \nfrom the Trainee Method using base.work. it works!:");
+                base.Work();
+
         }
     }
 }
